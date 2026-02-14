@@ -1,4 +1,3 @@
-/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +6,10 @@
 }
 
 body {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Prevents scrolling for this specific single-screen look */
+    background-color: #000; 
+    color: #fff; 
+    height: 100vh;
+    overflow: hidden; 
 }
 
 
@@ -22,7 +21,7 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between; /* Pushes Logo Left, Everything Else Right */
+    justify-content: space-between; 
     align-items: center;
     padding: 30px 50px;
     border-bottom: 1px solid #333;
@@ -31,7 +30,7 @@ header {
 .header-right {
     display: flex;
     align-items: center;
-    gap: 40px; /* Controls space between the Links and the Menu Icon */
+    gap: 40px; 
 }
 
 .nav-links {
@@ -71,12 +70,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8   5vh; /* Takes up rest of the screen */
+    height: 8   5vh; 
     padding: 0 100px;
 }
 
 .hero-content {
-    flex: 1; /* Takes up left half */
+    flex: 1;
 }
 
 h1 {
