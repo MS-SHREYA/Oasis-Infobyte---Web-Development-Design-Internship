@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></head>
+<body>
+
+    <div class="converter-container">
+        <h2>Temperature Converter</h2>
+        
+        <div class="input-group">
+            <label>Enter Temperature</label>
+            <input type="number" id="tempInput" placeholder="0">
+        </div>
+
+        <div class="input-group">
+            <label>From</label>
+            <select id="fromUnit">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>To</label>
+            <select id="toUnit">
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit" selected>Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+            </select>
+        </div>
+
+        <button onclick="convertTemperature()">Convert</button>
+
+        <div class="result" id="resultArea">
+            Result will appear here
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

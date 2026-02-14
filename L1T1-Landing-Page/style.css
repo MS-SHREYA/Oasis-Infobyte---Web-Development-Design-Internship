@@ -1,0 +1,124 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents scrolling for this specific single-screen look */
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Pushes Logo Left, Everything Else Right */
+    align-items: center;
+    padding: 30px 50px;
+    border-bottom: 1px solid #333;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Controls space between the Links and the Menu Icon */
+}
+
+/* Ensure nav-links flow horizontally */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between individual links */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #bbb; /* Slightly grey links */
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #fff;
+}
+
+/* Hamburger Menu Icon styling */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+}
+
+/* --- Hero Section (Main Content) --- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8   5vh; /* Takes up rest of the screen */
+    padding: 0 100px;
+}
+
+.hero-content {
+    flex: 1; /* Takes up left half */
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 300; /* Thin font like the image */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 14px;
+    color: #bbb; /* Grey subtext */
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Button Styling */
+.cta-btn {
+    padding: 15px 40px;
+    background-color: #777; /* Greyish button */
+    color: #fff;
+    border: none;
+    border-radius: 30px; /* Rounded pill shape */
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.hero-image img {
+    width: 100%;             /* Allows the image to fill its container width */
+    height: auto;            /* Keeps the aspect ratio correct */
+    max-height: 80vh;        /* NEW: Limits height to 80% of the screen height */
+    object-fit: contain;     /* Ensures the whole headphone image is visible */
+    
+    /* The reflection effect */
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}

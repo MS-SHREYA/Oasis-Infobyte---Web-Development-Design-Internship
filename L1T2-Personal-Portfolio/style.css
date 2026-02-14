@@ -1,0 +1,177 @@
+/* --- Global Settings --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+body { background-color: #080808; color: #fff; overflow-x: hidden; }
+
+/* --- The Artistic Aurora Background --- */
+.gradient-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: #080a0f;
+}
+
+/* The Glowing Blobs */
+.g1, .g2, .g3 {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    filter: blur(80px); /* This makes it look like soft light */
+    animation: float 20s infinite alternate;
+}
+
+/* Blob 1: Purple/Pink */
+.g1 {
+    background: radial-gradient(circle, rgba(140, 29, 238, 0.8) 0%, rgba(0,0,0,0) 50%);
+    width: 800px; height: 800px;
+    top: -200px; left: -200px;
+}
+
+/* Blob 2: Blue/Cyan */
+.g2 {
+    background: radial-gradient(circle, rgba(29, 116, 238, 0.8) 0%, rgba(0,0,0,0) 50%);
+    width: 600px; height: 600px;
+    top: 40%; right: -100px;
+    animation-delay: -5s;
+}
+
+/* Blob 3: Accent (Teal) */
+.g3 {
+    background: radial-gradient(circle, rgba(29, 238, 203, 0.6) 0%, rgba(0,0,0,0) 50%);
+    width: 400px; height: 400px;
+    bottom: -100px; left: 20%;
+    animation-delay: -10s;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(100px, 100px) rotate(20deg); }
+}
+
+/* --- Typography & Layout --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10%;
+    align-items: center;
+}
+
+.logo { font-weight: 700; font-size: 24px; letter-spacing: 2px; }
+
+.menu-btn { display: flex; flex-direction: column; gap: 6px; cursor: pointer; }
+.line { width: 30px; height: 2px; background: #fff; transition: 0.3s; }
+.menu-btn:hover .line:nth-child(1) { width: 40px; }
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.intro-tag {
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 8vw; /* Scales with screen */
+    line-height: 1;
+    margin-bottom: 30px;
+    font-weight: 200; /* Thin modern font */
+}
+
+/* The cool hollow text effect */
+.outline-text {
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.bio {
+    max-width: 500px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.btn-group { display: flex; gap: 20px; justify-content: center; }
+
+.primary-btn {
+    padding: 15px 40px;
+    background: #fff;
+    color: #000;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.secondary-btn {
+    padding: 15px 40px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.primary-btn:hover { transform: scale(1.05); }
+.secondary-btn:hover { background: rgba(255,255,255,0.1); }
+
+/* --- Resume Styling (Clean Swiss Grid) --- */
+.resume {
+    padding: 100px 15%;
+    background: rgba(0,0,0,0.3); /* Slight dimming */
+    backdrop-filter: blur(10px);
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 20px;
+}
+
+.resume-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.resume-row:hover {
+    background: rgba(255,255,255,0.02);
+    padding-left: 20px; /* Subtle movement */
+}
+
+.year { font-size: 14px; opacity: 0.5; }
+.role h3 { font-size: 20px; margin-bottom: 5px; }
+.role span { font-size: 14px; color: #8c8c8c; }
+.description { font-size: 15px; color: #aaa; }
+
+footer {
+    padding: 50px 10%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    color: #666;
+}
+
+.social-links a { margin-right: 20px; color: #fff; transition: 0.3s; }
+.social-links a:hover { color: #8c1dee; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .resume-row { grid-template-columns: 1fr; gap: 10px; }
+    h1 { font-size: 50px; }
+}
+
