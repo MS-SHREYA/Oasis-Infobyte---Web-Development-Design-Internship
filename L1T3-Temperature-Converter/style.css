@@ -52,14 +52,14 @@ input, select {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box; /* Ensures padding doesn't break width */
+    box-sizing: border-box; 
 }
 
 /* Button styling */
 button {
     width: 100%;
     padding: 12px;
-    background-color: #007bff; /* Blue button */
+    background-color: #007bff; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -79,5 +79,5 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
     color: #333;
-    min-height: 27px; /* Prevents jumping when text appears */
+    min-height: 27px;
 }
